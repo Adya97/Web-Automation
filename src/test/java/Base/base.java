@@ -49,5 +49,4 @@ public class base {
         extentReports.attachReporter(spark);
         extentReports.setSystemInfo("Tester","Aditya Nisal");
     }
-
 }
