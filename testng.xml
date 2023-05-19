@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/ViNUS/IdeaProjects/WebAutomationFramework"><classes><class name="TestCases.LoginPageTestCases"><methods><include name="enterUserName"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/ViNUS/IdeaProjects/WebAutomationFramework">
+        <classes>
+            <class name="TestCases.LanuchPageTestCases">
+                <methods><include name="invokeLanuchPage"/></methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,27 +1,34 @@
 package TestCases;
 
 import Base.base;
+import com.aventstack.extentreports.ExtentReports;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 import pageObject.Homepage;
 import pageObject.LoginPage;
 
 import java.io.IOException;
-import java.lang.Object;
-import java.util.Properties;
+import java.util.logging.Logger;
 
-public class LanuchPage extends base {
+public class LanuchPageTestCases extends base {
 
-    @BeforeTest
+    public WebDriver driver;
+    @BeforeMethod
     public void installDriver() throws IOException {
         driver = initalizeDriver();
-        prop.getProperty(url);
+        log.info("Driver is intialized");
+        driver.get(prop.getProperty("url"));
+        log.info("Navigated to the URL");
     }
-
-    public void invokationOfHomePage(String Username) throws IOException {
+    @Test
+    public void invokeLanuchPage(){
+        extentReports.createTest("Launch of Amazon");
+        log.info("Homepage is opened");
         Homepage h = new Homepage(driver);
         h.getLogin().click();
+        extentReports.flush();
     }
-    @AfterTest
+    @AfterMethod
     public void killDriver(){
         driver.quit();
     }
