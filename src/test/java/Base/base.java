@@ -26,11 +26,11 @@ public class base {
 
     public WebDriver initalizeDriver() throws IOException {
         prop = new Properties();
-        FileInputStream fis = new FileInputStream("C:\\Users\\ViNUS\\IdeaProjects\\WebAutomationFramework\\src\\main\\java\\resources\\data.properties");
+        FileInputStream fis = new FileInputStream("/Users/adityanisal/IdeaProjects/Web-Automation/src/main/java/resources/data.properties");
         prop.load(fis);
         String browserName = prop.getProperty("browser");
         if(browserName.equals("chrome")){
-            System.setProperty("webdriver.chrome.driver","C:\\Users\\ViNUS\\Downloads\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver","/Users/adityanisal/Downloads/chromedriver_mac64/chromedriver");
             driver = new ChromeDriver();
         }
         long time = 2000;
